@@ -85,48 +85,56 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {featuredProducts.map((product, index) => (
               <Card
-                key={index}
-                className="relative p-0 overflow-hidden flex flex-col justify-between"
+          key={index}
+          className="relative p-0 overflow-hidden flex flex-col justify-between border-[1.5px] border-[#005b99] rounded-xl shadow-md"
+        >
+          {/* Badge */}
+          <Badge
+            className={`absolute top-3 left-3 z-10 text-white ${
+              product.inStock ? "bg-[#3bbfab]" : "bg-gray-400"
+            }`}
+          >
+            {product.inStock ? "In Stock" : "Out of Stock"}
+          </Badge>
+
+          {/* Image */}
+          <div className="relative w-full h-56">
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="flex flex-col justify-between flex-grow">
+            <CardContent className="pt-4 px-4">
+              <h3 className="text-lg font-semibold text-[#005b99]">
+                {product.name}
+              </h3>
+              <p className="text-sm text-muted-foreground mt-1 line-clamp-3 min-h-[60px]">
+                {product.description}
+              </p>
+              <p className="text-2xl font-semibold text-[#0077cb] mt-4">
+                {product.price}
+              </p>
+            </CardContent>
+
+            <CardFooter className="px-4 p-4">
+              <Button
+                className={`w-full text-white ${
+                  product.inStock
+                    ? "bg-[#0077cb] hover:bg-[#005b99]"
+                    : "border border-[#0077cb] text-[#0077cb] bg-white"
+                }`}
+                disabled={!product.inStock}
               >
-                {/* Badge */}
-                <Badge
-                  className={`absolute top-3 left-3 z-10 ${
-                    product.inStock ? "bg-green-600" : "bg-red-600"
-                  }`}
-                >
-                  {product.inStock ? "In Stock" : "Out of Stock"}
-                </Badge>
-
-                {/* Image */}
-                <div className="relative w-full h-56">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="flex flex-col justify-between flex-grow">
-                  <CardHeader className="pt-4 px-4">
-                    <h3 className="text-lg font-semibold">{product.name}</h3>
-                    <p className="text-sm text-muted-foreground mt-1 line-clamp-3 min-h-[60px]">
-                      {product.description}
-                    </p>
-                  </CardHeader>
-
-                  <CardFooter className="px-4 p-4">
-                    <Button
-                      className="w-full"
-                      disabled={!product.inStock}
-                      variant={product.inStock ? "default" : "outline"}
-                    >
-                      {product.inStock ? "Add to Cart" : "Unavailable"}
-                    </Button>
-                  </CardFooter>
-                </div>
-              </Card>
+                {product.inStock ? "Add to Cart" : "Unavailable"}
+              </Button>
+            </CardFooter>
+          </div>
+        </Card>
             ))}
           </div>
           <div className="text-center">
