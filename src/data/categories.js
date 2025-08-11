@@ -1,13 +1,13 @@
 const categories = [
   {
     name: "CPAP",
-    image: "/images/categories/cpap.jpg",
+    image: "/images/categories/cpap.webp",
     description: "Continuous Positive Airway Pressure devices for sleep apnea therapy.",
     slug: "cpap",
   },
   {
     name: "BiPAP",
-    image: "/images/categories/bipap-2.jpg",
+    image: "/images/categories/bipap.jpg",
     description: "Bilevel Positive Airway Pressure devices for more advanced respiratory support.",
     slug: "bipap",
   },

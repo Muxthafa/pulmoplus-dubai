@@ -17,7 +17,7 @@ const ProductCard = ({
   inStock,
   slug,
 }) => {
-  const phoneNumber = "919876543210"; // Replace with your WhatsApp number
+  const phoneNumber = "971544479123"; // Replace with your WhatsApp number
   const message = encodeURIComponent(`Hi, I'm interested in booking "${name}"`);
   const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
   return (
