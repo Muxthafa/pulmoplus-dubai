@@ -34,7 +34,7 @@ export default function VideoSection() {
               Welcome to Our Store
             </h2>
             <p className="mt-2 text-gray-700">
-              Explore our curated collection of high-quality respiratory care products — designed for comfort, performance, and peace of mind.
+              Explore our curated collection of high-quality respiratory care products in Dubai — designed for comfort, performance, and peace of mind.
             </p>
           </CardContent>
         </Card>

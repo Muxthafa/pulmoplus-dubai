@@ -8,38 +8,49 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-const ProductCard = ({ id, name, image, description, price, inStock }) => {
+const ProductCard = ({
+  id,
+  name,
+  image,
+  description,
+  price,
+  inStock,
+  slug,
+}) => {
   const phoneNumber = "919876543210"; // Replace with your WhatsApp number
   const message = encodeURIComponent(`Hi, I'm interested in booking "${name}"`);
   const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
   return (
     <Card className="w-full max-w-sm overflow-hidden rounded-2xl shadow-md relative flex flex-col justify-between p-0 border-[1.5px] border-[#005b99]">
       {/* Badge */}
-      <Badge
-        variant={inStock ? "default" : "outline"}
-        className={`absolute top-3 left-3 z-10 text-xs px-2 py-1 ${
-          inStock
-            ? "bg-[var(--primary)] text-white"
-            : "bg-gray-200 text-gray-600"
-        }`}
-      >
-        {inStock ? "In Stock" : "Out of Stock"}
-      </Badge>
+      {price && (
+        <Badge
+          variant={inStock ? "default" : "outline"}
+          className={`absolute top-3 left-3 z-10 text-xs px-2 py-1 ${
+            inStock
+              ? "bg-[var(--primary)] text-white"
+              : "bg-gray-200 text-gray-600"
+          }`}
+        >
+          {inStock ? "In Stock" : "Out of Stock"}
+        </Badge>
+      )}
 
       {/* Image */}
-      <div className="w-full h-48 relative">
-        <Link href={id ? `/product/${id}` : "#"} passHref>
+      <div className="w-full h-75 relative">
+        <Link href={slug ? `/products?category=${encodeURIComponent(slug)}` : `/product/${id}`} passHref>
           <Image
             src={image}
             alt={name}
             fill
+            quality={50}
             className="object-cover rounded-t-2xl cursor-pointer"
           />
         </Link>
       </div>
 
       {/* Content */}
-      <CardContent className="px-4 pt-2">
+      <CardContent className="px-4 pt-0">
         <Link href={id ? `/product/${id}` : "#"}>
           <h3 className="text-xl font-semibold mb-1 text-[#005b99] hover:underline">
             {name}
@@ -68,7 +79,11 @@ const ProductCard = ({ id, name, image, description, price, inStock }) => {
             </a>
           </div>
         ) : (
-          <Link href={id ? `/product/${id}` : "#"} passHref className="w-full">
+          <Link
+            href={slug ? `/products?category=${encodeURIComponent(slug)}` : "#"}
+            passHref
+            className="w-full"
+          >
             <Button className="w-full bg-[#0077cb] text-white mt-4">
               View Products
             </Button>

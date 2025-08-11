@@ -14,7 +14,7 @@ const ContactDetails = () => {
         </Detail>
         <Detail icon="envelope" title="Email Address">
           
-info@pulmoplus.com
+pulmoplus11@gmail.com
         </Detail>
         <Detail icon="clock" title="Working Hours">
           Open 24/7 – Always Here for You

@@ -1,6 +1,7 @@
-import ProductCard from "./ProductCard"
-import featuredProducts from "@/data/products";
+import ProductCard from "./ProductCard";
+import featuredProducts from "@/data/featuredProducts";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function FeaturedProducts() {
   return (
@@ -26,8 +27,11 @@ export default function FeaturedProducts() {
           ))}
         </div>
         <div className="text-center m-4">
-          <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-lg">
-            View More Products
+          <Button
+            asChild
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-lg"
+          >
+            <Link href="/products">View More Products</Link>
           </Button>
         </div>
       </div>
