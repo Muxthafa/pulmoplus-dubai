@@ -27,7 +27,7 @@ export default function Home() {
               <span className="text-[var(--accent-light)]">Plus</span>
             </h1>
             <p className="text-2xl md:text-4xl mb-8">
-              Breathe Better, Live Stronger.
+              Empowering Dubai to Breathe Better and Live Stronger.
             </p>
             <div className="flex flex-wrap justify-center items-center gap-4 sm:flex-nowrap sm:space-x-4 max-sm:flex-col max-sm:space-x-0 max-sm:space-y-2">
               <Button
@@ -35,7 +35,7 @@ export default function Home() {
                 variant="outline"
                 className="bg-transparent border-[var(--accent-light)] border-4 text-[var(--accent-light)] hover:bg-[var(--accent)] hover:text-white transition duration-300 px-2 py-6 rounded-md text-2xl font-medium"
               >
-                <Link href="/contact">View Products</Link>
+                <Link href="/products">View Products</Link>
               </Button>
               <Button
                 asChild
@@ -48,9 +48,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <CategoryProducts />
-      <VideoSection />
       <FeaturedProducts />
+      <VideoSection />
+      <CategoryProducts />
     </div>
   );
 }

@@ -18,18 +18,24 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are */}
-      <section className="flex flex-col-reverse md:flex-row items-center gap-6">
+      <section className="flex flex-col-reverse md:flex-row items-center gap-6 py-6">
         <div className="w-full md:w-1/2">
           <h2 className="text-3xl font-semibold text-[#0077cb] mb-4">
             Who We Are
           </h2>
           <p className="text-gray-700 text-base leading-relaxed">
-            At PulmoPlus, we are committed to enhancing lives through innovative respiratory solutions. By combining cutting-edge medical technology with a deep commitment to patient well-being, we provide advanced products and personalized support that empower individuals to breathe easier and live healthier. Whether you're managing a chronic condition or seeking preventative care, PulmoPlus is here to support every breath you take.
+            At PulmoPlus, we are committed to enhancing lives through innovative
+            respiratory solutions in Dubai. By combining cutting-edge medical technology
+            with a deep commitment to patient well-being, we provide advanced
+            products and personalized support that empower individuals to
+            breathe easier and live healthier. Whether You&apos;re managing a
+            chronic condition or seeking preventative care, PulmoPlus is here to
+            support every breath you take.
           </p>
         </div>
         <div className="w-full md:w-1/2">
           <Image
-            src="/images/pulmo-bg-2.jpg"
+            src="/images/about/about-1.jpg"
             alt="About PulmoPlus"
             width={600}
             height={400}
@@ -39,7 +45,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="grid gap-8 md:grid-cols-2">
+      <section className="grid gap-8 md:grid-cols-2 sm:mt-32">
         <Card className="border border-[#3bbfab]">
           <CardContent className="p-6">
             <h3 className="text-2xl font-semibold text-[#005b99] mb-3">
@@ -67,96 +73,84 @@ export default function AboutPage() {
         </Card>
       </section>
 
-      <section className="py-14 bg-white">
-  <div className="max-w-7xl mx-auto px-4">
-    <h2 className="text-4xl md:text-5xl font-bold text-[#005b99] mb-12 text-center">
-      Breathing Life Into Every Home
-    </h2>
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#005b99] mb-12 text-center">
+            Breathing Life Into Every Home
+          </h2>
 
-    {/* First Category - Image Right */}
-    <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
-      <div className="w-full md:w-1/2">
-        <h3 className="text-2xl font-bold text-[#005b99] mb-3">
-          Advanced Respiratory Devices
-        </h3>
-        <div className="h-2 w-20 bg-[#3bbfab] mb-8"></div>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          Explore our cutting-edge range of respiratory devices including oxygen concentrators, nebulizers, and ventilators. Designed with clinical precision, our devices provide consistent airflow, enhanced filtration, and adaptive pressure settings—ideal for patients managing asthma, COPD, or other respiratory conditions. Trust in hospital-grade technology, now available for your home.
-        </p>
-        <Link
-          href="/products/respiratory-devices"
-          className="bg-[#3bbfab] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#ffc93c] transition duration-300"
-        >
-          Browse Devices
-        </Link>
-      </div>
-      <div className="w-full md:w-1/2">
-        <div className="relative">
-          <Image
-            src="/images/respiratory-device.jpg"
-            alt="Oxygen concentrator with nasal cannula setup"
-            width={800}
-            height={400}
-            className="w-full rounded-lg shadow-xl object-cover h-[400px]"
-            priority
-          />
-        </div>
-      </div>
-    </div>
-
-    {/* Second Category - Image Left */}
-    <div className="flex flex-col-reverse md:flex-row items-center gap-12 mb-20">
-      <div className="w-full md:w-1/2">
-        <div className="relative">
-          <Image
-            src="/images/home-care-support.jpg"
-            alt="Home respiratory support setup"
-            width={800}
-            height={400}
-            className="w-full rounded-lg shadow-xl object-cover h-[400px]"
-            priority
-          />
-        </div>
-      </div>
-      <div className="w-full md:w-1/2">
-        <h3 className="text-2xl font-bold text-[#005b99] mb-3">
-          Personalized Home Respiratory Care
-        </h3>
-        <div className="h-2 w-20 bg-[#3bbfab] mb-8"></div>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          We empower families with personalized respiratory care solutions tailored to individual needs. From CPAP/BiPAP therapy to humidification systems and portable oxygen kits, our products are designed for comfort, reliability, and ease of use—ensuring seamless support for long-term respiratory management at home.
-        </p>
-        <Link
-          href="/services/home-care"
-          className="bg-[#3bbfab] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#ffc93c] transition duration-300"
-        >
-          Learn More
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-      {/* Meet the Team */}
-      {/* <section className="text-center">
-        <h2 className="text-3xl font-semibold text-[#005b99] mb-10">Meet Our Team</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {[1, 2, 3, 4].map((person) => (
-            <div key={person} className="space-y-2">
-              <Image
-                src={`https://via.placeholder.com/200x200?text=Person+${person}`}
-                alt={`Team member ${person}`}
-                width={200}
-                height={200}
-                className="rounded-full mx-auto"
-              />
-              <h4 className="text-lg font-semibold text-[#0077cb]">Member {person}</h4>
-              <p className="text-gray-600 text-sm">Respiratory Specialist</p>
+          {/* First Category - Image Right */}
+          <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
+            <div className="w-full md:w-1/2">
+              <h3 className="text-2xl font-bold text-[#005b99] mb-3">
+                Advanced Respiratory Devices
+              </h3>
+              <div className="h-2 w-20 bg-[#3bbfab] mb-8"></div>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Explore our cutting-edge range of respiratory devices including
+                oxygen concentrators, nebulizers, and ventilators. Designed with
+                clinical precision, our devices provide consistent airflow,
+                enhanced filtration, and adaptive pressure settings—ideal for
+                patients managing asthma, COPD, or other respiratory conditions.
+                Trust in hospital-grade technology, now available for your home.
+              </p>
+              <Link
+                href="/products"
+                className="bg-[#3bbfab] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#ffc93c] transition duration-300"
+              >
+                Browse Devices
+              </Link>
             </div>
-          ))}
+            <div className="w-full md:w-1/2">
+              <div className="relative">
+                <Image
+                  src="/images/about/about-2.jpg"
+                  alt="Portable oxygen machine in Dubai"
+                  width={800}
+                  height={400}
+                  className="w-full rounded-lg shadow-xl object-cover h-[400px]"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Second Category - Image Left */}
+          <div className="flex flex-col-reverse md:flex-row items-center gap-12 mb-20">
+            <div className="w-full md:w-1/2">
+              <div className="relative">
+                <Image
+                  src="/images/about/about-3.jpg"
+                  alt="portable ventilator in Dubai"
+                  width={1000}
+                  height={1200}
+                  className="w-full rounded-lg shadow-xl object-cover h-[600px]"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <h3 className="text-2xl font-bold text-[#005b99] mb-3">
+                Personalized Home Respiratory Care
+              </h3>
+              <div className="h-2 w-20 bg-[#3bbfab] mb-8"></div>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                We empower families with personalized respiratory care solutions
+                tailored to individual needs. From CPAP/BiPAP therapy to
+                humidification systems and portable oxygen kits, our products
+                are designed for comfort, reliability, and ease of use—ensuring
+                seamless support for long-term respiratory management at home.
+              </p>
+              <Link
+                href="/products"
+                className="bg-[#3bbfab] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#ffc93c] transition duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Call to Action */}
       <section className="text-center space-y-4">
@@ -167,8 +161,11 @@ export default function AboutPage() {
           Reach out to us or explore our wide range of respiratory health
           products tailored for every need.
         </p>
-        <Button className="bg-[#0077cb] hover:bg-[#005b99] text-white px-6 py-3 text-lg">
-          Contact Us
+        <Button
+          asChild
+          className="bg-[#0077cb] hover:bg-[#005b99] text-white px-6 py-3 text-lg"
+        >
+          <Link href={`/contact`}>Contact Us</Link>
         </Button>
       </section>
     </main>

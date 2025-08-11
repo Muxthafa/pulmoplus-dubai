@@ -10,8 +10,10 @@ const Footer = () => {
             <h3 className="text-[#49f2d9] text-xl font-bold mb-4">About Us</h3>
             <p className="text-white/80 mb-4">
               PulmoPlus provides innovative respiratory care solutions designed
-              to support healthier living. From portable inhalers to
-              hospital-grade nebulizers, our mission is to enhance breathing comfort.
+              to support healthier living in Dubai. From CPAP and BiPAP machines
+              to portable oxygen concentrators, nebulizers, and hospital-grade
+              ventilators, our mission is to enhance breathing comfort and
+              improve quality of life.
             </p>
             <div className="flex space-x-4">
               <a className="text-[#49f2d9] hover:text-[#0077CB] cursor-pointer">
@@ -30,56 +32,85 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-[#49f2d9] text-xl font-bold mb-4">Our Products</h3>
+            <h3 className="text-[#49f2d9] text-xl font-bold mb-4">
+              Our Products
+            </h3>
             <ul className="space-y-2 text-white/80">
               <li>
-                <Link href="" className="hover:text-[#49f2d9]">
-                  Nebulizers
+                <Link
+                  href="/products?category=cpap"
+                  className="hover:text-[#49f2d9]"
+                >
+                  CPAP
                 </Link>
               </li>
               <li>
-                <Link href="" className="hover:text-[#49f2d9]">
-                  Inhalers
+                <Link
+                  href="/products?category=bipap"
+                  className="hover:text-[#49f2d9]"
+                >
+                  BiPAP
                 </Link>
               </li>
               <li>
-                <Link href="" className="hover:text-[#49f2d9]">
-                  Oxygen Concentrators
+                <Link
+                  href="/products?category=portable-oxygen"
+                  className="hover:text-[#49f2d9]"
+                >
+                  Portable Oxygen
                 </Link>
               </li>
               <li>
-                <Link href="" className="hover:text-[#49f2d9]">
-                  Accessories
+                <Link
+                  href="/products?category=ventilator"
+                  className="hover:text-[#49f2d9]"
+                >
+                  Ventilator
                 </Link>
               </li>
               <li>
-                <Link href="" className="hover:text-[#49f2d9]">
-                  Rental Services
+                <Link
+                  href="/products?category=oxygen-and-nebuliser"
+                  className="hover:text-[#49f2d9]"
+                >
+                  Oxygen and Nebuliser
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-[#49f2d9] text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-[#49f2d9] text-xl font-bold mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2 text-white/80">
               <li>
-                <Link href="/" className="hover:text-[#49f2d9]">Home</Link>
+                <Link href="/" className="hover:text-[#49f2d9]">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-[#49f2d9]">About Us</Link>
+                <Link href="/about" className="hover:text-[#49f2d9]">
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-[#49f2d9]">Products</Link>
+                <Link href="/products" className="hover:text-[#49f2d9]">
+                  Products
+                </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#49f2d9]">Contact Us</Link>
+                <Link href="/contact" className="hover:text-[#49f2d9]">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-[#49f2d9] text-xl font-bold mb-4">Contact Info</h3>
+            <h3 className="text-[#49f2d9] text-xl font-bold mb-4">
+              Contact Info
+            </h3>
             <ul className="space-y-4 text-white/80">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt text-[#49f2d9] mt-1 mr-3"></i>
@@ -91,7 +122,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <i className="fas fa-envelope text-[#49f2d9] mr-3"></i>
-                <span>info@pulmoplus.com</span>
+                <span>pulmoplus11@gmail.com</span>
               </li>
               <li className="flex items-center">
                 <i className="fas fa-clock text-[#49f2d9] mr-3"></i>
@@ -103,7 +134,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="text-white/70 text-sm">
-            © {new Date().getFullYear()} PulmoPlus. All rights reserved.
+            © {new Date().getFullYear()} PulmoPlus Dubai. All rights reserved.
           </p>
         </div>
       </div>
