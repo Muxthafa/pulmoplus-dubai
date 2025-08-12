@@ -1,6 +1,6 @@
 const products = [
   {
-    id: 5,
+    id: 1,
     name: "Inogen Rove 6",
     description:
       "Portable oxygen concentrator with 6 flow settings, extended battery options, and quiet operation, designed for maximum flexibility and ease of use for active oxygen therapy patients.",
@@ -9,6 +9,7 @@ const products = [
     inStock: true,
     category: "Portable Oxygen",
     categorySlug: "portable-oxygen",
+    productSlug: "inogen-rove-6",
     specifications: `
     <ul>
       <li><strong>Oxygen Flow:</strong> Pulse dose delivery system, 6 flow settings (1–6)</li>
@@ -38,7 +39,7 @@ const products = [
   `,
   },
   {
-    id: 6,
+    id: 2,
     name: "SimplyGo Mini",
     description:
       "A lightweight, stylish portable oxygen concentrator with pulse-dose delivery, extended battery options, and FAA approval, designed for active oxygen therapy users on the go.",
@@ -47,6 +48,7 @@ const products = [
     inStock: true,
     category: "Portable Oxygen",
     categorySlug: "portable-oxygen",
+    productSlug: "simplygo-mini",
     specifications: `
     <ul>
       <li><strong>Weight:</strong> 2.7 kg (with extended battery); 2.2 kg (with lightweight battery)</li>
@@ -78,7 +80,7 @@ const products = [
   `,
   },
   {
-    id: 12,
+    id: 3,
     name: "Oxylife Independence",
     description:
       "Lightweight portable oxygen concentrator with both continuous flow and pulse dose modes, designed for patients needing mobility without compromising oxygen therapy. Ideal for home, travel, and active lifestyles.",
@@ -87,6 +89,7 @@ const products = [
     inStock: true,
     category: "Portable Oxygen",
     categorySlug: "portable-oxygen",
+    productSlug: "oxylife-independence",
     specifications: `
     <ul>
       <li><strong>Oxygen Flow:</strong> Continuous Flow: 0.5–3 LPM; Pulse Dose: Settings 1–6</li>
@@ -112,7 +115,7 @@ const products = [
   `,
   },
   {
-    id: 8,
+    id: 4,
     name: "ResMed AirSense 11",
     description:
       "The ResMed AirSense 11 AutoSet is the latest premium auto-adjusting CPAP device for obstructive sleep apnea, featuring advanced digital health technology, an integrated humidifier, and a sleek, modern design. Built for comfort, it offers personalized pressure therapy, remote monitoring, and interactive coaching tools to help users adapt quickly.",
@@ -121,6 +124,7 @@ const products = [
     inStock: true, // Assuming it's in stock
     category: "CPAP",
     categorySlug: "cpap",
+    productSlug: "resmed-airsense-11",
     specifications: `
     <ul>
       <li><strong>Modes:</strong> AutoSet, AutoSet for Her, CPAP</li>
@@ -152,15 +156,16 @@ const products = [
   },
 
   {
-    id: 7,
+    id: 5,
     name: "ResMed AirSense 10",
     description:
-      "The ResMed AirSense 10 AutoSe is a premium auto-adjusting pressure device with integrated humidifier, cellular connectivity, and advanced event detection.",
+      "The ResMed AirSense 10 AutoSet is a premium auto-adjusting pressure device with integrated humidifier, cellular connectivity, and advanced event detection.",
     image: "/images/products/resmed-airsense-10.jpg", // Update with correct path if needed
     price: "4,000.00", // Price in AED without formatting
     inStock: true, // Assuming it's in stock
     category: "CPAP",
     categorySlug: "cpap",
+    productSlug: "resmed-airsense-10",
     specifications: `
     <ul>
       <li><strong>Sound Level:</strong> 26.6 dBA</li>
@@ -194,7 +199,7 @@ const products = [
   },
 
   {
-    id: 9,
+    id: 6,
     name: "ResMed AirMini",
     description:
       "The ResMed AirMini is the world’s smallest CPAP machine, delivering the same high-quality therapy as larger devices in an ultra-compact design. Perfect for travel, it offers multiple therapy modes, waterless humidification, and wireless connectivity for comfort, portability, and performance.",
@@ -203,6 +208,7 @@ const products = [
     inStock: true,
     category: "CPAP",
     categorySlug: "cpap",
+    productSlug: "resmed-airmini",
     specifications: `
     <ul>
       <li><strong>Modes:</strong> AutoSet, AutoSet for Her, CPAP</li>
@@ -230,7 +236,7 @@ const products = [
   `,
   },
   {
-    id: 10,
+    id: 7,
     name: "Philips DreamStation Auto CPAP with Heated Humidifier",
     description:
       "Advanced auto-adjusting CPAP device with integrated heated humidifier, SmartRamp, Opti-Start, and A-Flex pressure relief for comfortable, effective sleep apnea therapy.",
@@ -239,6 +245,7 @@ const products = [
     inStock: true,
     category: "CPAP",
     categorySlug: "cpap",
+    productSlug: "philips-dreamstation-auto-cpap-with-heated-humidifier",
     specifications: `
     <ul>
       <li><strong>SmartRamp:</strong> Gradually increases pressure to help ease into sleep</li>
@@ -264,7 +271,7 @@ const products = [
   `,
   },
   {
-    id: 11,
+    id: 8,
     name: "BMC Auto CPAP",
     description:
       "Advanced auto-adjusting CPAP device with integrated heated humidifier, quiet operation, and comprehensive therapy monitoring for effective obstructive sleep apnea treatment.",
@@ -273,6 +280,7 @@ const products = [
     inStock: true,
     category: "CPAP",
     categorySlug: "cpap",
+    productSlug: "bmc-auto-cpap",
     specifications: `
     <ul>
       <li><strong>Pressure Range:</strong> 4–20 cm H₂O</li>
@@ -295,7 +303,7 @@ const products = [
   `,
   },
   {
-    id: 1,
+    id: 9,
     name: "Lumis 150",
     description:
       "Advanced non-invasive ventilator for chronic respiratory conditions with multiple ventilation modes, integrated humidifier, and intelligent synchrony features for optimal comfort and effectiveness.",
@@ -304,6 +312,7 @@ const products = [
     inStock: true,
     category: "BiPAP",
     categorySlug: "bipap",
+    productSlug: "lumis-150",
     specifications: `
     <ul>
       <li><strong>Modes:</strong> CPAP, S, T, ST, iVAPS, PAC</li>
@@ -332,7 +341,7 @@ const products = [
   `,
   },
   {
-    id: 2,
+    id: 10,
     name: "ResMed AirCurve 10 VAuto",
     description:
       "Advanced BiPAP device with auto-adjusting inspiratory and expiratory pressures, integrated humidifier, and intelligent comfort features for optimal respiratory therapy.",
@@ -341,6 +350,7 @@ const products = [
     inStock: true,
     category: "BiPAP",
     categorySlug: "bipap",
+    productSlug: "resmed-aircurve-10-vauto",
     specifications: `
     <ul>
       <li><strong>Modes:</strong> VAuto, CPAP</li>
@@ -369,7 +379,7 @@ const products = [
   `,
   },
   {
-    id: 3,
+    id: 11,
     name: "Philips Respironics BiPAP S/T",
     description:
       "Non-invasive BiPAP device with timed backup rate for chronic respiratory insufficiency, delivering reliable ventilation support with advanced comfort and monitoring features.",
@@ -378,6 +388,7 @@ const products = [
     inStock: true,
     category: "BiPAP",
     categorySlug: "bipap",
+    productSlug: "philips-respironics-bipap-s-t",
     specifications: `
     <ul>
       <li><strong>Modes:</strong> S, T, ST</li>
@@ -408,7 +419,7 @@ const products = [
   `,
   },
   {
-    id: 13,
+    id: 12,
     name: "ResMed Astral 150",
     description:
       "Versatile, portable life support ventilator for invasive and non-invasive ventilation in adult and pediatric patients. Offers multiple therapy modes, advanced monitoring, long battery life, and intuitive touchscreen controls for use in hospitals, long-term care, or at home.",
@@ -417,6 +428,8 @@ const products = [
     inStock: true,
     category: "Ventilator",
     categorySlug: "ventilator",
+    productSlug: "resmed-astral-150",
+    condition: "Refurbished",
     specifications: `
     <ul>
       <li><strong>Modes:</strong> CPAP, PSV, S/T, SIMV, ACV, PAC, Pressure Control, Volume Control, and more</li>
@@ -447,7 +460,7 @@ const products = [
   `,
   },
   {
-    id: 14,
+    id: 13,
     name: "Luisa Ventilator",
     description:
       "Portable life support ventilator by Löwenstein Medical, designed for invasive and non-invasive ventilation in adults and children. Supports continuous 24/7 use with multiple ventilation modes, a long battery life, and a large touchscreen for easy monitoring and adjustments.",
@@ -456,6 +469,8 @@ const products = [
     inStock: true,
     category: "Ventilator",
     categorySlug: "ventilator",
+    productSlug: "luisa-ventilator",
+    condition: "Refurbished",
     specifications: `
     <ul>
       <li><strong>Modes:</strong> CPAP, PSV, S/T, SIMV, PCV, VCV, and more</li>
@@ -490,15 +505,16 @@ const products = [
   `,
   },
   {
-    id: 15,
+    id: 14,
     name: "Long Fian Oxygen Concentrator",
     description:
       "A reliable, medical-grade oxygen concentrator designed for continuous operation 24/7. Equipped with an easy-to-read LCD display, innovative coding technology, and safety features, it delivers high-concentration oxygen for improved treatment outcomes in patients with respiratory conditions.",
-    image: "/images/products/long-fian-oxygen.jpg", // Update with actual image path
+    image: "/images/products/longfian.webp", // Update with actual image path
     price: "2,500.00",
     inStock: true,
     category: "Oxygen and Nebuliser",
     categorySlug: "oxygen-and-nebuliser",
+    productSlug: "long-fian-oxygen-concentrator",
     specifications: `
     <ul>
       <li><strong>Flow Rate:</strong> 0.5 – 5 L</li>
@@ -524,7 +540,7 @@ const products = [
   `,
   },
   {
-    id: 16,
+    id: 15,
     name: "Philips EverFlo Oxygen Concentrator",
     description:
       "The Philips EverFlo is a compact, energy-efficient stationary oxygen concentrator designed for home oxygen therapy. It delivers continuous oxygen flow with consistent purity, offers quiet operation, and requires minimal maintenance, making it ideal for long-term use.",
@@ -533,6 +549,7 @@ const products = [
     inStock: true,
     category: "Oxygen and Nebuliser",
     categorySlug: "oxygen-and-nebuliser",
+    productSlug: "philips-everflo-oxygen-concentrator",
     specifications: `
     <ul>
       <li><strong>Flow Rate:</strong> 0.5 – 5 L/min</li>
@@ -560,15 +577,16 @@ const products = [
   `,
   },
   {
-    id: 17,
-    name: "Aerogun Solo",
+    id: 16,
+    name: "Aerogen Solo",
     description:
-      "The Aerogun Solo is a compact, portable percussion massage gun designed to relieve muscle soreness, improve circulation, and speed up recovery. With powerful motor performance and a lightweight ergonomic build, it's perfect for athletes, gym-goers, and daily muscle relaxation at home or on the go.",
-    image: "/images/products/aerogon-solo.jpg", // Update with actual image path
+      "The Aerogen Solo is a compact, portable percussion massage gun designed to relieve muscle soreness, improve circulation, and speed up recovery. With powerful motor performance and a lightweight ergonomic build, it's perfect for athletes, gym-goers, and daily muscle relaxation at home or on the go.",
+    image: "/images/products/aerogen-solo.webp", // Update with actual image path
     price: "2,100.00",
     inStock: true,
     category: "Oxygen and Nebuliser",
     categorySlug: "oxygen-and-nebuliser",
+    productSlug: "aerogen-solo",
     specifications: `
     <ul>
       <li><strong>Weight:</strong> ~0.8 – 1 kg</li>

@@ -1,6 +1,6 @@
 const featuredProducts = [
-{
-    id: 5,
+  {
+    id: 1,
     name: "Inogen Rove 6",
     description:
       "Portable oxygen concentrator with 6 flow settings, extended battery options, and quiet operation, designed for maximum flexibility and ease of use for active oxygen therapy patients.",
@@ -9,6 +9,7 @@ const featuredProducts = [
     inStock: true,
     category: "Portable Oxygen",
     categorySlug: "portable-oxygen",
+    productSlug: "inogen-rove-6",
     specifications: `
     <ul>
       <li><strong>Oxygen Flow:</strong> Pulse dose delivery system, 6 flow settings (1–6)</li>
@@ -38,81 +39,7 @@ const featuredProducts = [
   `,
   },
   {
-    id: 6,
-    name: "SimplyGo Mini",
-    description:
-      "A lightweight, stylish portable oxygen concentrator with pulse-dose delivery, extended battery options, and FAA approval, designed for active oxygen therapy users on the go.",
-    image: "/images/products/simply-go-mini.webp", // Update with actual image path
-    price: "12,900.00",
-    inStock: true,
-    category: "Portable Oxygen",
-    categorySlug: "portable-oxygen",
-    specifications: `
-    <ul>
-      <li><strong>Weight:</strong> 2.7 kg (with extended battery); 2.2 kg (with lightweight battery)</li>
-      <li><strong>Dimensions:</strong> 8.3" (W) × 9.4–10.2" (L) × 3.6" (D)</li>
-      <li><strong>Oxygen Output:</strong> Up to 1,000 mL/min (pulse flow)</li>
-      <li><strong>Oxygen Concentration:</strong> 87–96%</li>
-      <li><strong>Outlet Pressure:</strong> 20 psig</li>
-      <li><strong>Noise Level:</strong> >43 dBA (setting 2), >46 dBA (setting 5)</li>
-      <li><strong>Battery Duration:</strong> Standard – up to 4.5 hours; Extended – up to 9 hours</li>
-      <li><strong>Power:</strong> AC 100–240V, 50–60Hz; DC 12–16V</li>
-      <li><strong>Maximum Operating Altitude:</strong> 10,000 ft</li>
-      <li><strong>FAA Approved:</strong> Yes</li>
-      <li><strong>Manufacturer:</strong> Philips Respironics</li>
-    </ul>
-  `,
-    features: `
-    <ul>
-      <li>⚖️ Lightweight at only 2.2–2.7 kg depending on battery</li>
-      <li>💨 Delivers up to 1,000 mL/min pulse flow oxygen</li>
-      <li>🛠 Durable, sleek design for longer product life</li>
-      <li>🔋 Easy-to-remove, exchangeable battery</li>
-      <li>📟 Intuitive touchscreen LCD</li>
-      <li>🎒 Carry case included; optional backpack available</li>
-      <li>🔇 Low noise operation</li>
-      <li>🔌 Low power consumption, AC/DC adaptable</li>
-      <li>🛫 FAA-approved for in-flight use</li>
-      <li>⏱ Extended battery option for up to 9 hours runtime</li>
-    </ul>
-  `,
-  },
-  {
-    id: 12,
-    name: "Oxylife Independence",
-    description:
-      "Lightweight portable oxygen concentrator with both continuous flow and pulse dose modes, designed for patients needing mobility without compromising oxygen therapy. Ideal for home, travel, and active lifestyles.",
-    image: "/images/products/oxlife-independence.jpg", // Update with actual image path
-    price: "11,700.00",
-    inStock: true,
-    category: "Portable Oxygen",
-    categorySlug: "portable-oxygen",
-    specifications: `
-    <ul>
-      <li><strong>Oxygen Flow:</strong> Continuous Flow: 0.5–3 LPM; Pulse Dose: Settings 1–6</li>
-      <li><strong>Oxygen Concentration:</strong> 90% ± 3% at all settings</li>
-      <li><strong>Sound Level:</strong> ~40 dBA</li>
-      <li><strong>Weight:</strong> 2.2–2.5 kg (without accessories)</li>
-      <li><strong>Dimensions:</strong> 22 cm (H) × 21 cm (W) × 9 cm (D)</li>
-      <li><strong>Battery Duration:</strong> Standard – up to 4–5 hours</li>
-      <li><strong>FAA Approved:</strong> Yes</li>
-    </ul>
-  `,
-    features: `
-    <ul>
-      <li>🔄 Dual delivery modes – continuous flow & pulse dose</li>
-      <li>⚖️ Lightweight, portable design with ergonomic handle</li>
-      <li>🔋 Extended battery options for all-day mobility</li>
-      <li>🔇 Quiet operation for minimal disruption</li>
-      <li>📟 Easy-to-use LCD interface</li>
-      <li>🛫 FAA-approved for air travel</li>
-      <li>🛠 Durable construction for daily use indoors or outdoors</li>
-      <li>🧼 Low-maintenance filter system</li>
-    </ul>
-  `,
-  },
-  {
-    id: 8,
+    id: 4,
     name: "ResMed AirSense 11",
     description:
       "The ResMed AirSense 11 AutoSet is the latest premium auto-adjusting CPAP device for obstructive sleep apnea, featuring advanced digital health technology, an integrated humidifier, and a sleek, modern design. Built for comfort, it offers personalized pressure therapy, remote monitoring, and interactive coaching tools to help users adapt quickly.",
@@ -121,6 +48,7 @@ const featuredProducts = [
     inStock: true, // Assuming it's in stock
     category: "CPAP",
     categorySlug: "cpap",
+    productSlug: "resmed-airsense-11",
     specifications: `
     <ul>
       <li><strong>Modes:</strong> AutoSet, AutoSet for Her, CPAP</li>
@@ -150,17 +78,58 @@ const featuredProducts = [
     </ul>
   `,
   },
+  {
+    id: 11,
+    name: "Philips Respironics BiPAP S/T",
+    description:
+      "Non-invasive BiPAP device with timed backup rate for chronic respiratory insufficiency, delivering reliable ventilation support with advanced comfort and monitoring features.",
+    image: "/images/products/philips-bipap-st.jpg", // Update with actual image path
+    price: "9,700.00",
+    inStock: true,
+    category: "BiPAP",
+    categorySlug: "bipap",
+    productSlug: "philips-respironics-bipap-s-t",
+    specifications: `
+    <ul>
+      <li><strong>Modes:</strong> S, T, ST</li>
+      <li><strong>Pressure Range:</strong> IPAP 4–25 cm H₂O; EPAP 4–25 cm H₂O</li>
+      <li><strong>Breath Rate:</strong> 0–30 BPM</li>
+      <li><strong>Rise Time:</strong> Adjustable (1–6 settings)</li>
+      <li><strong>Trigger & Cycle Sensitivity:</strong> Adjustable</li>
+      <li><strong>Ramp Time:</strong> 0–45 minutes</li>
+      <li><strong>Sound Level:</strong> ~30 dBA</li>
+      <li><strong>Dimensions:</strong> 18 cm (H) × 14 cm (W) × 21 cm (D) (approx.)</li>
+      <li><strong>Weight:</strong> ~1.36 kg</li>
+      <li><strong>Power Supply:</strong> 100–240V AC, 50–60Hz</li>
+      <li><strong>Connectivity:</strong> SD card, optional modem for remote monitoring</li>
+      <li><strong>Warranty:</strong> 2 Years</li>
+    </ul>
+  `,
+    features: `
+    <ul>
+      <li>🫁 Bilevel pressure with timed backup ensures minimum breath rate</li>
+      <li>⚡ Digital Auto-Trak sensitivity adapts to patient breathing patterns</li>
+      <li>📈 Adjustable rise time for inhalation comfort</li>
+      <li>🚀 Ramp feature for gradual pressure increase</li>
+      <li>🔔 Integrated alarms for safety</li>
+      <li>💧 Heated humidification option reduces dryness</li>
+      <li>🔇 Quiet operation for better sleep</li>
+      <li>🖥️ Simple, user-friendly interface</li>
+    </ul>
+  `,
+  },
 
   {
-    id: 7,
+    id: 5,
     name: "ResMed AirSense 10",
     description:
-      "The ResMed AirSense 10 AutoSe is a premium auto-adjusting pressure device with integrated humidifier, cellular connectivity, and advanced event detection.",
+      "The ResMed AirSense 10 AutoSet is a premium auto-adjusting pressure device with integrated humidifier, cellular connectivity, and advanced event detection.",
     image: "/images/products/resmed-airsense-10.jpg", // Update with correct path if needed
     price: "4,000.00", // Price in AED without formatting
     inStock: true, // Assuming it's in stock
     category: "CPAP",
     categorySlug: "cpap",
+    productSlug: "resmed-airsense-10",
     specifications: `
     <ul>
       <li><strong>Sound Level:</strong> 26.6 dBA</li>
@@ -189,6 +158,47 @@ const featuredProducts = [
       <li>🎛️ User-friendly controls with intuitive interface and color LCD screen</li>
       <li>💡 Built-in ambient light sensor adjusts screen brightness automatically</li>
       <li>📦 Includes: Auto-adjusting CPAP machine, built-in humidifier, tubing, power supply & cord, carry bag, installed filter, mask, and user manual</li>
+    </ul>
+  `,
+  },
+  {
+    id: 2,
+    name: "SimplyGo Mini",
+    description:
+      "A lightweight, stylish portable oxygen concentrator with pulse-dose delivery, extended battery options, and FAA approval, designed for active oxygen therapy users on the go.",
+    image: "/images/products/simply-go-mini.webp", // Update with actual image path
+    price: "12,900.00",
+    inStock: true,
+    category: "Portable Oxygen",
+    categorySlug: "portable-oxygen",
+    productSlug: "simplygo-mini",
+    specifications: `
+    <ul>
+      <li><strong>Weight:</strong> 2.7 kg (with extended battery); 2.2 kg (with lightweight battery)</li>
+      <li><strong>Dimensions:</strong> 8.3" (W) × 9.4–10.2" (L) × 3.6" (D)</li>
+      <li><strong>Oxygen Output:</strong> Up to 1,000 mL/min (pulse flow)</li>
+      <li><strong>Oxygen Concentration:</strong> 87–96%</li>
+      <li><strong>Outlet Pressure:</strong> 20 psig</li>
+      <li><strong>Noise Level:</strong> >43 dBA (setting 2), >46 dBA (setting 5)</li>
+      <li><strong>Battery Duration:</strong> Standard – up to 4.5 hours; Extended – up to 9 hours</li>
+      <li><strong>Power:</strong> AC 100–240V, 50–60Hz; DC 12–16V</li>
+      <li><strong>Maximum Operating Altitude:</strong> 10,000 ft</li>
+      <li><strong>FAA Approved:</strong> Yes</li>
+      <li><strong>Manufacturer:</strong> Philips Respironics</li>
+    </ul>
+  `,
+    features: `
+    <ul>
+      <li>⚖️ Lightweight at only 2.2–2.7 kg depending on battery</li>
+      <li>💨 Delivers up to 1,000 mL/min pulse flow oxygen</li>
+      <li>🛠 Durable, sleek design for longer product life</li>
+      <li>🔋 Easy-to-remove, exchangeable battery</li>
+      <li>📟 Intuitive touchscreen LCD</li>
+      <li>🎒 Carry case included; optional backpack available</li>
+      <li>🔇 Low noise operation</li>
+      <li>🔌 Low power consumption, AC/DC adaptable</li>
+      <li>🛫 FAA-approved for in-flight use</li>
+      <li>⏱ Extended battery option for up to 9 hours runtime</li>
     </ul>
   `,
   },

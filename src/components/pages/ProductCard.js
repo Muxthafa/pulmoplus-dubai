@@ -16,6 +16,7 @@ const ProductCard = ({
   price,
   inStock,
   slug,
+  productSlug
 }) => {
   const phoneNumber = "971544479123"; // Replace with your WhatsApp number
   const message = encodeURIComponent(`Hi, I'm interested in booking "${name}"`);
@@ -38,7 +39,7 @@ const ProductCard = ({
 
       {/* Image */}
       <div className="w-full h-75 relative">
-        <Link href={slug ? `/products?category=${encodeURIComponent(slug)}` : `/product/${id}`} passHref>
+        <Link href={slug ? `/products?category=${encodeURIComponent(slug)}` : `/product/${productSlug}`} passHref>
           <Image
             src={image}
             alt={name}
@@ -67,7 +68,7 @@ const ProductCard = ({
         {price ? (
           <div className="flex items-center justify-between w-full gap-2">
             <Button asChild className="bg-[#0077cb] text-white px-2 flex-1">
-              <Link href={id ? `/product/${id}` : "#"}>View Now</Link>
+              <Link href={id ? `/product/${productSlug}` : "#"}>View Now</Link>
             </Button>
             <a
               href={waUrl}

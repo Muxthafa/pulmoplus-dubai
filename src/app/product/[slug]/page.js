@@ -5,13 +5,15 @@ import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export default async function ProductDetail({ params }) {
-  const { id } = await params;
-  const product = products.find((p) => p.id.toString() === id);
+  const { slug } = await params;
+  const product = products.find((p) => p.productSlug === slug);
 
   if (!product) return notFound();
 
   const phoneNumber = "971544479123"; // Replace with your WhatsApp number
-  const message = encodeURIComponent(`Hi, I'm interested in booking "${product.name}"`);
+  const message = encodeURIComponent(
+    `Hi, I'm interested in booking "${product.name}"`
+  );
   const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
@@ -42,14 +44,23 @@ export default async function ProductDetail({ params }) {
 
           <hr className="border-t border-gray-200" />
 
-          <div className="flex items-center space-x-2">
-            <span className="font-semibold">Category:</span>
-            <Link
-              href={`/products?category=${encodeURIComponent(product.category)}`}
-              className="text-[#3bbfab] font-semibold hover:underline"
-            >
-              {product.category}
-            </Link>
+          <div className="flex sm:justify-between max-sm:flex-col max-sm:gap-2 sm:items-center space-x-2">
+            <div>
+              <span className="font-semibold">Category:</span>{" "}
+              <Link
+                href={`/products?category=${encodeURIComponent(product.category)}`}
+                className="text-[#3bbfab] font-semibold hover:underline"
+              >
+                {product.category}
+              </Link>
+            </div>
+
+            {product?.condition && <div>
+              <span className="font-semibold">Condition:</span>{" "}
+              <span className="text-[#ff6384] font-semibold hover:underline">
+                Refurbished
+              </span>
+            </div>}
           </div>
 
           <div className="flex justify-between flex-col flex-wrap gap-4">
@@ -73,14 +84,15 @@ export default async function ProductDetail({ params }) {
 
             {/* Buy Now Button */}
             {product.inStock && (
-              <div className="mt-6"><a
-                href={waUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" bg-[#3bbfab] text-white px-6 py-2 rounded-md text-lg font-semibold transition-colors duration-200 hover:bg-green-700 flex-1 text-center"
-              >
-                Buy Now
-              </a>
+              <div className="mt-6">
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" bg-[#3bbfab] text-white px-6 py-2 rounded-md text-lg font-semibold transition-colors duration-200 hover:bg-green-700 flex-1 text-center"
+                >
+                  Buy Now
+                </a>
               </div>
             )}
           </div>
