@@ -16,7 +16,8 @@ const ProductCard = ({
   price,
   inStock,
   slug,
-  productSlug
+  productSlug,
+  condition,
 }) => {
   const phoneNumber = "971544479123"; // Replace with your WhatsApp number
   const message = encodeURIComponent(`Hi, I'm interested in booking "${name}"`);
@@ -34,6 +35,16 @@ const ProductCard = ({
           }`}
         >
           {inStock ? "In Stock" : "Out of Stock"}
+        </Badge>
+      )}
+
+      {/* Condition Badge */}
+      {condition && (
+        <Badge
+          variant={"destructive"}
+          className={`absolute top-3 right-3 z-10 text-xs px-2 py-1 `}
+        >
+          {condition}
         </Badge>
       )}
 

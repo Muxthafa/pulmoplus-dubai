@@ -4,6 +4,51 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
+export async function generateMetadata({
+  params,
+}) {
+  const { slug } = params;
+  const product = products.find((p) => p.productSlug === slug);
+
+  if (!product) {
+    return {
+      title: "Product Not Found | PulmoPlus",
+      description: "The product you are looking for is not available.",
+    };
+  }
+
+  const siteName = "PulmoPlus";
+  const baseUrl = "https://www.pulmoplus.com";
+
+  return {
+    title: `${product.name} in Dubai & UAE | ${siteName}`,
+    description: `${product.name} – ${product.category}. ${product.description?.slice(0, 150)} Available in Dubai & across UAE. Buy online now.`,
+    keywords: [
+      product.name,
+      `${product.name} Dubai`,
+      `${product.name} UAE`,
+      `${product.category} in Dubai`,
+      "Portable oxygen machine in Dubai",
+      "CPAP in Dubai",
+      "BiPAP in Dubai",
+      "Oxygen concentrator UAE",
+    ],
+    openGraph: {
+      title: `${product.name} in Dubai & UAE | ${siteName}`,
+      description: `${product.name} – ${product.category}. Available now in Dubai & across UAE.`,
+      url: `${baseUrl}/products/${product.productSlug}`,
+      images: [
+        {
+          url: `${baseUrl}${product.image}`,
+          width: 800,
+          height: 600,
+          alt: product.name,
+        },
+      ],
+    },
+  };
+}
+
 export default async function ProductDetail({ params }) {
   const { slug } = await params;
   const product = products.find((p) => p.productSlug === slug);

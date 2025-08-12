@@ -25,7 +25,7 @@ const categories = [
   },
   {
     name: "Oxygen and Nebuliser",
-    image: "/images/categories/oxygen.jpg",
+    image: "/images/categories/oxygen-and-nebuliser.jpg",
     description: "Essential oxygen therapy and nebulization devices for respiratory care.",
     slug: "oxygen-and-nebuliser",
   },
