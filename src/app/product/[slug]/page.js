@@ -4,9 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-export async function generateMetadata({
-  params,
-}) {
+export async function generateMetadata({ params }) {
   const { slug } = params;
   const product = products.find((p) => p.productSlug === slug);
 
@@ -100,12 +98,14 @@ export default async function ProductDetail({ params }) {
               </Link>
             </div>
 
-            {product?.condition && <div>
-              <span className="font-semibold">Condition:</span>{" "}
-              <span className="text-[#ff6384] font-semibold hover:underline">
-                Refurbished
-              </span>
-            </div>}
+            {product?.condition && (
+              <div>
+                <span className="font-semibold">Condition:</span>{" "}
+                <span className="text-[#ff6384] font-semibold hover:underline">
+                  Refurbished
+                </span>
+              </div>
+            )}
           </div>
 
           <div className="flex justify-between flex-col flex-wrap gap-4">
@@ -129,15 +129,26 @@ export default async function ProductDetail({ params }) {
 
             {/* Buy Now Button */}
             {product.inStock && (
-              <div className="mt-6">
-                <a
-                  href={waUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" bg-[#3bbfab] text-white px-6 py-2 rounded-md text-lg font-semibold transition-colors duration-200 hover:bg-green-700 flex-1 text-center"
-                >
-                  Buy Now
-                </a>
+              <div className="flex gap-4 mt-6">
+                <div>
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" bg-[#3bbfab] text-white px-6 py-2 rounded-md text-lg font-semibold transition-colors duration-200 hover:bg-green-700 flex-1 text-center"
+                  >
+                    Buy Now
+                  </a>
+                </div>
+                <p className="text-gray-700">
+                  30-day return policy.{" "}
+                  <Link
+                    href="/return-policy"
+                    className="text-teal-700 font-medium hover:underline hover:text-teal-800 transition"
+                  >
+                    Read more →
+                  </Link>
+                </p>
               </div>
             )}
           </div>

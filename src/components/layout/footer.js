@@ -104,6 +104,14 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+              <Link
+                href="/return-policy"
+                className="hover:text-[#49f2d9]"
+              >
+                Return policy
+              </Link>
+              </li>
             </ul>
           </div>
 
