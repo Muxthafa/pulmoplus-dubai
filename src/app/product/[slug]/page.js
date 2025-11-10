@@ -129,8 +129,8 @@ export default async function ProductDetail({ params }) {
 
             {/* Buy Now Button */}
             {product.inStock && (
-              <div className="flex gap-4 mt-6">
-                <div>
+              <div className="flex flex-wrap items-center gap-4 mt-6">
+                <div className="flex-shrink-0">
                   <a
                     href={waUrl}
                     target="_blank"
@@ -140,8 +140,8 @@ export default async function ProductDetail({ params }) {
                     Buy Now
                   </a>
                 </div>
-                <p className="text-gray-700">
-                  30-day return policy.{" "}
+                <p className="text-gray-700 text-sm sm:text-base leading-relaxed flex-1 min-w-[180px]">
+                  30-day return policy.&nbsp;
                   <Link
                     href="/return-policy"
                     className="text-teal-700 font-medium hover:underline hover:text-teal-800 transition"
