@@ -5,7 +5,7 @@ const products = [
     description:
       "Portable oxygen concentrator with 6 flow settings, extended battery options, and quiet operation, designed for maximum flexibility and ease of use for active oxygen therapy patients.",
     image: "/images/products/inogen-rove-6.webp", // Update with actual image path
-    price: "11,800.00",
+    price: "9,500.00",
     inStock: true,
     category: "Portable Oxygen",
     categorySlug: "portable-oxygen",
@@ -44,7 +44,7 @@ const products = [
     description:
       "A lightweight, stylish portable oxygen concentrator with pulse-dose delivery, extended battery options, and FAA approval, designed for active oxygen therapy users on the go.",
     image: "/images/products/simply-go-mini.webp", // Update with actual image path
-    price: "12,900.00",
+    price: "12,500.00",
     inStock: true,
     category: "Portable Oxygen",
     categorySlug: "portable-oxygen",
@@ -85,7 +85,7 @@ const products = [
     description:
       "Lightweight portable oxygen concentrator with both continuous flow and pulse dose modes, designed for patients needing mobility without compromising oxygen therapy. Ideal for home, travel, and active lifestyles.",
     image: "/images/products/oxlife-independence.jpg", // Update with actual image path
-    price: "11,700.00",
+    price: "11,500.00",
     inStock: true,
     category: "Portable Oxygen",
     categorySlug: "portable-oxygen",
@@ -120,7 +120,7 @@ const products = [
     description:
       "The ResMed AirSense 11 AutoSet is the latest premium auto-adjusting CPAP device for obstructive sleep apnea, featuring advanced digital health technology, an integrated humidifier, and a sleek, modern design. Built for comfort, it offers personalized pressure therapy, remote monitoring, and interactive coaching tools to help users adapt quickly.",
     image: "/images/products/resmed-airsense-11.jpg", // Update with correct path if needed
-    price: "4,700.00", // Range without currency symbols
+    price: "4,000.00", // Range without currency symbols
     inStock: true, // Assuming it's in stock
     category: "CPAP",
     categorySlug: "cpap",
@@ -161,7 +161,7 @@ const products = [
     description:
       "The ResMed AirSense 10 AutoSet is a premium auto-adjusting pressure device with integrated humidifier, cellular connectivity, and advanced event detection.",
     image: "/images/products/resmed-airsense-10.jpg", // Update with correct path if needed
-    price: "4,000.00", // Price in AED without formatting
+    price: "3,500.00", // Price in AED without formatting
     inStock: true, // Assuming it's in stock
     category: "CPAP",
     categorySlug: "cpap",
@@ -204,7 +204,7 @@ const products = [
     description:
       "The ResMed AirMini is the world’s smallest CPAP machine, delivering the same high-quality therapy as larger devices in an ultra-compact design. Perfect for travel, it offers multiple therapy modes, waterless humidification, and wireless connectivity for comfort, portability, and performance.",
     image: "/images/products/resmed-air-mini.webp", // Update with actual image path
-    price: "5,500.00",
+    price: "4,500.00",
     inStock: true,
     category: "CPAP",
     categorySlug: "cpap",
@@ -241,7 +241,7 @@ const products = [
     description:
       "Advanced auto-adjusting CPAP device with integrated heated humidifier, SmartRamp, Opti-Start, and A-Flex pressure relief for comfortable, effective sleep apnea therapy.",
     image: "/images/products/philip-dreamstation.jpg", // Update with actual image path
-    price: "4000.00",
+    price: "3,700.00",
     inStock: true,
     category: "CPAP",
     categorySlug: "cpap",
@@ -276,7 +276,7 @@ const products = [
     description:
       "Advanced auto-adjusting CPAP device with integrated heated humidifier, quiet operation, and comprehensive therapy monitoring for effective obstructive sleep apnea treatment.",
     image: "/images/products/bmc-auto-cpap.webp", // Update with actual image path
-    price: "2,700.00",
+    price: "2,500.00",
     inStock: true,
     category: "CPAP",
     categorySlug: "cpap",
@@ -308,7 +308,7 @@ const products = [
     description:
       "Advanced non-invasive ventilator for chronic respiratory conditions with multiple ventilation modes, integrated humidifier, and intelligent synchrony features for optimal comfort and effectiveness.",
     image: "/images/products/resmed-lumis-150.webp", // Update with actual image path
-    price: "9,300.00",
+    price: "7,700.00",
     inStock: true,
     category: "BiPAP",
     categorySlug: "bipap",
@@ -346,7 +346,7 @@ const products = [
     description:
       "Advanced BiPAP device with auto-adjusting inspiratory and expiratory pressures, integrated humidifier, and intelligent comfort features for optimal respiratory therapy.",
     image: "/images/products/aircurve.jpg", // Update with actual image path
-    price: "7,300.00",
+    price: "6,700.00",
     inStock: true,
     category: "BiPAP",
     categorySlug: "bipap",
@@ -384,7 +384,7 @@ const products = [
     description:
       "Non-invasive BiPAP device with timed backup rate for chronic respiratory insufficiency, delivering reliable ventilation support with advanced comfort and monitoring features.",
     image: "/images/products/philips-bipap-st.jpg", // Update with actual image path
-    price: "9,700.00",
+    price: "8,500.00",
     inStock: true,
     category: "BiPAP",
     categorySlug: "bipap",
@@ -424,7 +424,7 @@ const products = [
     description:
       "Versatile, portable life support ventilator for invasive and non-invasive ventilation in adult and pediatric patients. Offers multiple therapy modes, advanced monitoring, long battery life, and intuitive touchscreen controls for use in hospitals, long-term care, or at home.",
     image: "/images/products/astral-150.jpg", // Update with actual image path
-    price: "17,500.00",
+    price: "13,500.00",
     inStock: true,
     category: "Ventilator",
     categorySlug: "ventilator",
@@ -465,7 +465,7 @@ const products = [
     description:
       "Portable life support ventilator by Löwenstein Medical, designed for invasive and non-invasive ventilation in adults and children. Supports continuous 24/7 use with multiple ventilation modes, a long battery life, and a large touchscreen for easy monitoring and adjustments.",
     image: "/images/products/luisa-ventilator.jpg", // Update with actual image path
-    price: "19,300.00",
+    price: "17,700.00",
     inStock: true,
     category: "Ventilator",
     categorySlug: "ventilator",
@@ -582,7 +582,7 @@ const products = [
     description:
       "The Aerogen Solo is a compact, portable percussion massage gun designed to relieve muscle soreness, improve circulation, and speed up recovery. With powerful motor performance and a lightweight ergonomic build, it's perfect for athletes, gym-goers, and daily muscle relaxation at home or on the go.",
     image: "/images/products/aerogen-solo.webp", // Update with actual image path
-    price: "2,100.00",
+    price: "1,900.00",
     inStock: true,
     category: "Oxygen and Nebuliser",
     categorySlug: "oxygen-and-nebuliser",
